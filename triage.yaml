@@ -5,11 +5,9 @@ on:
 
 jobs:
   needs-more-info:
-    runs-on: ubuntu-latest
     if: github.event.label.name == 'needs more info'
     steps:
       - uses: actions/checkout@master
-      - uses: actions/github@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
